@@ -8,6 +8,11 @@ import expedia from '/expedia.png'
 import airbnb from '/airbnb.png'
 import Orbitz from '/Orbitz.png'
 import bag from '/bag.svg'
+import bookingIcon from '/bookingIcon.png'
+import weatherIcon from '/weatherIcon.png'
+import worldIcon from '/worldIcon.png'
+import DestinationCard from '../Componets/DestinationCard'
+
 
 const HomePage = () => {
   return (
@@ -55,20 +60,88 @@ const HomePage = () => {
 
       {/* available site section start */}
       <div className='  md:mt-3 lg:mt-12 mx-6'>
-  <div className='grid  grid-cols-3 lg:grid-cols-5 md:grid-cols-3 gap-12 w-full'>
-    <img className='lg:w-36 lgh-12' src={booking} alt="Booking" />
-    <img className='w-32 h-8 lg:w-36 lg:h-12' src={tripadvisor} alt="Tripadvisor" />
-    <img className='w-32 h-8 lg:w-36 lg:h-12' src={expedia} alt="Expedia" />
-    <img className='w-32 h-6 lg:w-36 lg:h-12' src={airbnb} alt="Airbnb" />
-    <img className='w-32 h-5 lg:w-36 lg:h-12' src={Orbitz} alt="Orbitz" />
-  </div>
-</div>
+        <div className='grid  grid-cols-3 lg:grid-cols-5 md:grid-cols-3 gap-12 w-full'>
+          <img className='lg:w-36 lgh-12' src={booking} alt="Booking" />
+          <img className='w-32 h-8 lg:w-36 lg:h-12' src={tripadvisor} alt="Tripadvisor" />
+          <img className='w-32 h-8 lg:w-36 lg:h-12' src={expedia} alt="Expedia" />
+          <img className='w-32 h-6 lg:w-36 lg:h-12' src={airbnb} alt="Airbnb" />
+          <img className='w-32 h-5 lg:w-36 lg:h-12' src={Orbitz} alt="Orbitz" />
+        </div>
+      </div>
 
       {/* available site section end */}
 
 
       {/* services section start */}
-      {/* services section end */}
+      <div className='flex flex-col justify-center items-center lg:flex-row lg:justify-around my-12 '>
+  <div className='w-72 h-52 flex flex-col justify-center items-center md:w-full'>
+    <h1 className='font-semibold text-pink-500 md:text-center text-lg tracking-wide'>
+      SERVICES
+    </h1>
+    <h1 className='font-bold text-center text-2xl md:text-center'>
+      Our top value categories for you
+    </h1>
+  </div>
+
+  {/* service card */}
+  <div className='flex flex-col md:flex-row lg:flex-row'>
+    <div className='w-64 h-80 md:w-56 lg:w-64 border-2 border-gray-200 shadow-xl rounded-xl py-12 flex flex-col justify-center items-center m-4'>
+      <div className='flex justify-center mb-4'>
+        <img className="md:w-32 lg:w-40 h-32" src={worldIcon} alt="worldIcon" />
+      </div>
+      <h1 className='font-bold text-lg text-center py-5'>
+        Best Tour Guide
+      </h1>
+      <p className='text-center px-4'>
+        What looked like a small patch of purple grass, above five feet.
+      </p>
+    </div>
+    <div className='w-64 h-80 md:w-56 lg:w-64 border-2 border-gray-200 shadow-xl rounded-xl py-12 flex flex-col justify-center items-center m-4'>
+      <div className='flex justify-center mb-4'>
+        <img className="md:w-32 lg:w-40 h-32" src={bookingIcon} alt="bookingIcon" />
+      </div>
+      <h1 className='font-bold text-lg text-center py-5'>
+        Easy Booking
+      </h1>
+      <p className='text-center px-4'>
+        Square, was moving across the sand in their direction.
+      </p>
+    </div>
+    <div className='w-64 h-80 md:w-56 lg:w-64 border-2 border-gray-200 shadow-xl rounded-xl py-12 flex flex-col justify-center items-center m-4'>
+      <div className='flex justify-center mb-4'>
+        <img className="md:w-32 lg:w-40 h-32" src={weatherIcon} alt="weatherIcon" />
+      </div>
+      <h1 className='font-bold text-lg text-center py-5'>
+        Weather Forecast
+      </h1>
+      <p className='text-center px-4'>
+        What looked like a small patch of purple grass, above five feet.
+      </p>
+    </div>
+  </div>
+  {/*  service card */}
+
+</div>
+  {/* services section end */}
+
+  {/* top destination section begning */}
+
+
+  <div className='flex flex-col justify-center items-center lg:flex-row lg:justify-around my-12 md:ml-2 lg:ml-12'>
+  <div className='flex flex-col justify-center md:items-center lg:items-start mb-9'>
+    <h1 className='text-pink-500 my-2'>TOP DESTINATION</h1>
+    <h1 className='font-bold text-xl'>Explore top destination</h1>
+  </div>
+  <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center'>
+    <DestinationCard />
+    <DestinationCard />
+    <DestinationCard />
+  </div>
+</div>
+
+
+  {/* top destination section end */}
+
 
     </>
   )
